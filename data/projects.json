@@ -1,0 +1,41 @@
+[
+  {
+    "id": "project_1",
+    "title": "Heartland Whole Health Institute",
+    "author": "Antony Dawson",
+    "year": "2024",
+    "location": "Bentonville, Kansas",
+    "category": "Building Analysis",
+    "image": "assets/HWH.JPG",
+    "concept": "A study of spatial warmth, timber geometry, and the way the interior ceiling structure shapes the experience of gathering and movement within the building.",
+    "process": "Documented the project through observational photography, frame selection, and close study of the curved wood ceiling system and public circulation zones.",
+    "final": "A visual documentation archive highlighting atmosphere, material rhythm, and the relationship between structure, ceiling geometry, and public occupation.",
+    "video": "assets/ADCvid2.mp4"
+  },
+    {
+    "id": "project_2",
+    "title": "Heartland Whole Health Institute",
+    "author": "Antony Dawson",
+    "year": "2026",
+    "location": "Bentonville, Arkansas",
+    "category": "Freeform",
+    "image": "assets/HWH.JPG",
+    "concept": "A study of spatial warmth, timber geometry, and the way the interior ceiling structure shapes the experience of gathering and movement within the building.",
+    "process": "Documented the project through observational photography, frame selection, and close study of the curved wood ceiling system and public circulation zones.",
+    "final": "A visual documentation archive highlighting atmosphere, material rhythm, and the relationship between structure, ceiling geometry, and public occupation.",
+    "video": ""
+  },
+  {
+    "id": "project_3",
+    "title": "Heartland Whole Health Institute",
+    "author": "Antony Dawson",
+    "year": "2026",
+    "location": "Bentonville, Kansas",
+    "category": "Building Analysis",
+    "image": "assets/HWH.JPG",
+    "concept": "A study of spatial warmth, timber geometry, and the way the interior ceiling structure shapes the experience of gathering and movement within the building.",
+    "process": "Documented the project through observational photography, frame selection, and close study of the curved wood ceiling system and public circulation zones.",
+    "final": "A visual documentation archive highlighting atmosphere, material rhythm, and the relationship between structure, ceiling geometry, and public occupation.",
+    "video": ""
+  }  
+]
