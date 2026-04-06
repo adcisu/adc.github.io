@@ -1,0 +1,172 @@
+.about-page {
+  margin-top: 70px;
+  background: #f5f5f3;
+  min-height: 100vh;
+}
+
+.about-hero {
+  padding: 90px 48px 70px;
+  border-bottom: 1px solid #ddd;
+}
+
+.about-kicker,
+.section-kicker {
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #b2b2b2;
+  margin-bottom: 26px;
+}
+
+.about-title {
+  max-width: 760px;
+  font-size: 78px;
+  line-height: 0.95;
+  font-weight: 600;
+  color: #111;
+}
+
+.about-title span {
+  color: #b8b8b8;
+}
+
+.about-accent-line {
+  width: 64px;
+  height: 1px;
+  background: #e66b64;
+  margin: 34px 0 34px;
+}
+
+.about-intro {
+  max-width: 950px;
+  font-size: 24px;
+  line-height: 1.65;
+  color: #666;
+}
+
+.mission-section {
+  padding: 80px 48px;
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 80px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mission-left p {
+  font-size: 21px;
+  line-height: 1.7;
+  color: #666;
+  max-width: 880px;
+  margin-bottom: 42px;
+}
+
+.mission-right {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.mission-item {
+  padding-left: 26px;
+  border-left: 1px solid #ddd;
+}
+
+.mission-code {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: #e66b64;
+  margin-bottom: 10px;
+}
+
+.mission-item h3 {
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.mission-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #8a8a8a;
+}
+
+.snapshot-section {
+  padding: 80px 48px 110px;
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.snapshot-card {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #f5f5f3;
+}
+
+.snapshot-image-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 0.72;
+  overflow: hidden;
+  background: #d9d9d7;
+}
+
+.snapshot-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+.snapshot-card:hover .snapshot-image-wrap img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+@media (max-width: 1100px) {
+  .about-title {
+    font-size: 58px;
+  }
+
+  .about-intro {
+    font-size: 20px;
+  }
+
+  .mission-section {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .snapshot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .about-hero,
+  .mission-section,
+  .snapshot-section {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .about-title {
+    font-size: 42px;
+  }
+
+  .about-intro,
+  .mission-left p {
+    font-size: 18px;
+  }
+
+  .snapshot-grid {
+    grid-template-columns: 1fr;
+  }
+}
