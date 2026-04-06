@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADC Map</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/map.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- NAV -->
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">
+            <img src="assets/logo.jpg" alt="" />
+          </div>
+
+          <div class="brand-text">
+            <div class="adc">ADC</div>
+            <div class="title">Architecture Documentation Collective</div>
+          </div>
+        </div>
+
+        <div class="links">
+          <a href="home.html">Home</a>
+          <a href="explore.html">Explore</a>
+          <a class="active">Map</a>
+          <a href="submit.html">Submit</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+
+      <main class="map-page">
+        <div class="map-left">
+          <div class="map-header">
+            <div class="map-kicker">SPATIAL INDEX</div>
+            <h1>Map</h1>
+          </div>
+
+          <div id="map"></div>
+
+          <div class="map-note">CLICK A REGION TO FILTER PROJECTS</div>
+        </div>
+
+        <aside class="map-panel" id="map-panel">
+          <div class="panel-empty" id="panel-empty">
+            <div class="panel-empty-text">Select a documented location.</div>
+          </div>
+
+          <div class="panel-content hidden" id="panel-content">
+            <div class="panel-top">
+              <div>
+                <div class="panel-label">REGION</div>
+                <h2 id="panel-region-title">North America</h2>
+              </div>
+
+              <div class="panel-meta-top">
+                <span id="panel-count">1 PROJECTS</span>
+                <button id="panel-close" class="panel-close" aria-label="Close panel">×</button>
+              </div>
+            </div>
+
+            <div class="panel-list" id="panel-list"></div>
+          </div>
+        </aside>
+      </main>
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-col">
+            <div class="footer-brand">
+              <div class="logo">
+                <img src="assets/logo.jpg" alt="">
+              </div>
+              <div class="adc">ADC</div>
+            </div>
+
+            <p>
+              A living archive of architectural thought, documentation, and spatial exploration.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>NAVIGATE</h4>
+              <a href="home.html">Home</a>
+              <a href="explore.html">Explore</a>
+              <a href="map.html">Map</a>
+              <a href="submit.html">Submit</a>
+              <a href="about.html">About</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>SYSTEM INFO</h4>
+            <div class="info">
+              VERSION_2026.03<br>
+              ARCHIVE_STATUS: ACTIVE<br>
+              SUBMISSIONS: OPEN
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="scripts/map.js"></script>
+  </body>
+</html>

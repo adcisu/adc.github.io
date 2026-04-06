@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/project_page.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
+</head>
+<body>
+  <div class="nav">
+    <div class="brand">
+      <div class="logo">
+        <img src="assets/logo.jpg" alt="" />
+      </div>
+      <div class="brand-text">
+        <div class="adc">ADC</div>
+        <div class="title">Architecture Documentation Collective</div>
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="home.html">Home</a>
+      <a href="explore.html" class="active">Explore</a>
+      <a href="map.html">Map</a>
+      <a href="submit.html">Submit</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+
+  <section class="project-hero">
+    <img id="project-hero-image" src="" alt="" />
+    <div class="hero-overlay"></div>
+
+    <div class="hero-text">
+      <div class="meta-line" id="project-category">SECTION_VIEW</div>
+      <h1 id="project-title">Project Title</h1>
+      <div class="hero-meta" id="project-meta">Author • Year • Location</div>
+    </div>
+  </section>
+
+  <section class="project-content">
+    <a href="explore.html" class="back">← EXPLORE</a>
+
+    <div class="content-grid">
+      <div class="content-left">
+        <div class="section">
+          <div class="section-id">C_01</div>
+          <h3>Concept</h3>
+          <p id="project-concept">Project concept text goes here.</p>
+        </div>
+
+        <div class="section">
+          <div class="section-id">C_02</div>
+          <h3>Process</h3>
+          <p id="project-process">Project process text goes here.</p>
+        </div>
+
+        <div class="section">
+          <div class="section-id">C_03</div>
+          <h3>Final</h3>
+          <p id="project-final">Project final text goes here.</p>
+        </div>
+      </div>
+
+      <div class="content-right">
+        <div class="video-placeholder" id="project-video">
+          <span>VIDEO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <footer class="footer">
+    <div class="footer-inner">
+
+      <div>
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="assets/logo.jpg" alt="ADC logo">
+          </div>
+          <div class="adc">A D C</div>
+        </div>
+
+        <p>
+          A living archive of architectural thought,
+          documentation, and spatial exploration.
+        </p>
+      </div>
+
+      <div>
+        <h4>NAVIGATE</h4>
+        <a href="home.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="map.html">Map</a>
+        <a href="submit.html">Submit</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <div>
+        <h4>SYSTEM INFO</h4>
+        <div class="info">
+          VERSION_2026.03<br>
+          ARCHIVE_STATUS: ACTIVE<br>
+          SUBMISSIONS: OPEN
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script src="scripts/project.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Submit — ADC</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
+  <link rel="stylesheet" href="styles/submit.css" />
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <div class="nav">
+    <div class="brand">
+        <div class="logo">
+            <img src="assets/logo.jpg" alt="" />
+        </div>
+
+        <div class="brand-text">
+        <div class="adc">ADC</div>
+        <div class="title">Architecture Documentation Collective</div>
+        </div>
+    </div>
+
+    <div class="links">
+        <a href="home.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="map.html">Map</a>
+        <a href="submit.html" class="active">Submit</a>
+        <a href="about.html">About</a>
+    </div>
+    </div>
+
+  <main class="submit-page">
+    <section class="submit-hero">
+      <div class="submit-kicker">NEW SUBMISSION</div>
+      <h1>Submit Documentation</h1>
+    </section>
+
+    <section class="submit-form-section">
+      <form class="submit-form" id="submitForm">
+
+        <div class="form-card">
+          <div class="form-card-label">TITLE BLOCK — ADC SUBMISSION FORM</div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="projectTitle">PROJECT TITLE *</label>
+              <input id="projectTitle" name="projectTitle" type="text" placeholder="Enter project title" required>
+            </div>
+
+            <div class="field">
+              <label for="authorName">AUTHOR NAME *</label>
+              <input id="authorName" name="authorName" type="text" placeholder="Your name" required>
+            </div>
+
+            <div class="field">
+              <label for="year">YEAR</label>
+              <input id="year" name="year" type="text" placeholder="e.g. 2026">
+            </div>
+
+            <div class="field">
+              <label for="location">LOCATION</label>
+              <input id="location" name="location" type="text" placeholder="City, Country">
+            </div>
+          </div>
+
+          <div class="field full-width">
+            <label for="category">CATEGORY *</label>
+            <select id="category" name="category" required>
+              <option value="">Select category</option>
+              <option value="Building Analysis">Building Analysis</option>
+              <option value="Freeform">Freeform</option>
+              <option value="Vlog">Vlog</option>
+              <option value="Field Studies">Field Studies</option>
+              <option value="Sci-Tech">Sci-Tech</option>
+            </select>
+          </div>
+        </div>
+
+
+          <div class="upload-link-block">
+            <label class="upload-label" for="driveLink">GOOGLE DRIVE LINK</label>
+
+            <div class="upload-box upload-link-box">
+              <input
+                id="driveLink"
+                name="driveLink"
+                type="url"
+                placeholder="Paste Google Drive image or video link"
+              >
+            </div>
+          </div>
+
+        <div class="submit-section documentation-section">
+          <div class="section-label">DOCUMENTATION</div>
+
+          <div class="text-block">
+            <label for="concept">CONCEPT</label>
+            <textarea id="concept" name="concept" placeholder="Describe your conceptual approach..."></textarea>
+          </div>
+
+          <div class="text-block">
+            <label for="process">PROCESS</label>
+            <textarea id="process" name="process" placeholder="Detail your working process..."></textarea>
+          </div>
+
+          <div class="text-block">
+            <label for="finalOutcome">FINAL OUTCOME</label>
+            <textarea id="finalOutcome" name="finalOutcome" placeholder="Describe the final result..."></textarea>
+          </div>
+
+          <div class="text-block">
+            <label for="reflection">REFLECTION</label>
+            <textarea id="reflection" name="reflection" placeholder="What did you learn?"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">SUBMIT DOCUMENTATION →</button>
+
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div>
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="assets/logo.jpg" alt="ADC logo">
+          </div>
+          <div class="adc">A D C</div>
+        </div>
+
+        <p>
+          A living archive of architectural thought,
+          documentation, and spatial exploration.
+        </p>
+      </div>
+
+      <div>
+        <h4>NAVIGATE</h4>
+        <a href="home.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="map.html">Map</a>
+        <a href="submit.html">Submit</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <div>
+        <h4>SYSTEM INFO</h4>
+        <div class="info">
+          VERSION_2026.03<br>
+          ARCHIVE_STATUS: ACTIVE<br>
+          SUBMISSIONS: OPEN
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="scripts/submit.js"></script>
+</body>
+</html>
