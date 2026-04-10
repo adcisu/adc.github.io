@@ -226,3 +226,50 @@
 .card-tag {
   pointer-events: none; /* prevents overlay blocking clicks */
 }
+
+
+@media (max-width: 768px) {
+  .featured {
+    padding: 72px 20px 44px;
+  }
+
+  .featured-header h2 {
+    font-size: 28px;
+  }
+
+  .featured-link {
+    font-size: 11px;
+  }
+
+  .card-image-wrap {
+    height: 260px;
+  }
+
+  .card-body {
+    padding: 18px 16px 18px;
+  }
+
+  .card-body h3 {
+    font-size: 16px;
+  }
+
+  .card-meta {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .featured-header h2 {
+    font-size: 24px;
+  }
+
+  .card-image-wrap {
+    height: 220px;
+  }
+}
