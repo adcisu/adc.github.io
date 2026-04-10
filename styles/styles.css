@@ -246,3 +246,159 @@ button {
   right: 60px;
 }
 
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: rgba(255, 255, 255, 0.92);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  width: 18px;
+  height: 1.5px;
+  background: #222;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 13px 16px;
+    height: 70px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .brand {
+    min-width: 0;
+    max-width: calc(100% - 56px);
+  }
+
+  .brand-text .adc {
+    font-size: 11px;
+  }
+
+  .brand-text .title {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 12px;
+    padding: 8px 0 6px;
+    background: rgba(255, 255, 255, 0.96);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .nav.nav-open {
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .nav.nav-open .links {
+    display: flex;
+  }
+
+  .links a {
+    padding: 14px 0;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .links a.active::after {
+    display: none;
+  }
+
+  .hero {
+    min-height: calc(100svh - 70px);
+    height: auto;
+  }
+
+  .content {
+    top: 120px;
+    left: 24px;
+    right: 24px;
+    max-width: none;
+  }
+
+  .content h1 {
+    font-size: 48px;
+    line-height: 0.95;
+  }
+
+  .content p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .buttons a {
+    width: 100%;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  .meta.right {
+    top: auto;
+    bottom: 78px;
+    right: 24px;
+    text-align: right;
+  }
+
+  .meta.bottom {
+    bottom: 26px;
+    right: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    top: 112px;
+    left: 18px;
+    right: 18px;
+  }
+
+  .content h1 {
+    font-size: 38px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 13px 16px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+  }
+
+  .meta.left,
+  .meta.right,
+  .meta.bottom {
+    font-size: 9px;
+    letter-spacing: 0.16em;
+  }
+}
