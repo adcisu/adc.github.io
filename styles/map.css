@@ -223,16 +223,30 @@
 }
 
 @media (max-width: 1100px) {
-  .map-shell {
-    grid-template-columns: 1fr;
+  .map-page {
+    margin-top: 108px;
+    height: auto;
+    display: block;
   }
 
-  .map-panel {
-    border-top: 1px solid #e2e2de;
+  .map-left {
+    width: 100%;
+    height: 60svh;
+    min-height: 420px;
   }
 
   #map {
-    min-height: 560px;
-    height: 65vh;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .map-panel {
+    min-height: 260px;
+    border-top: 1px solid #e2e2de;
+  }
+
+  .panel-empty {
+    padding-top: 30px;
   }
 }
