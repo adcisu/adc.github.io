@@ -152,6 +152,8 @@
 }
 
 .project-title {
+  font-weight: bold;
+  text-transform: capitalize;
   font-size: 15px;
   line-height: 1.4;
   color: #222;
@@ -207,60 +209,18 @@
   }
 }
 
-
-@media (max-width: 768px) {
-  .explore-hero,
-  .projects-grid-section {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .explore-header h1 {
-    font-size: 40px;
-  }
-
-  .filter-bar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
-  }
-
-  .filters {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  .filters button,
-  .filters select,
-  .filter-bar input {
-    width: 100%;
-  }
-
-  .project-info {
-    padding: 14px 14px 16px;
-  }
-
-  .project-meta {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
+.project-category {
+  margin-bottom: 8px;
+  color: #e66b64;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
-@media (max-width: 480px) {
-  .explore-hero,
-  .projects-grid-section {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .explore-header h1 {
-    font-size: 34px;
-  }
-
-  .filters {
-    grid-template-columns: 1fr;
-  }
+.project-location {
+  margin-bottom: 12px;
+  color: #888;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
