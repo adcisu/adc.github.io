@@ -168,45 +168,6 @@
   min-width: 100%;
   }
 
-  
-  body {
-    overflow-x: hidden;
-  }
-
-  .nav {
-    padding: 0 16px;
-  }
-
-  .links {
-    gap: 16px;
-  }
-
-  .brand-text .title {
-    display: none;
-  }
-
-  .content {
-    left: 24px;
-    top: 110px;
-    max-width: calc(100% - 48px);
-  }
-
-  h1 {
-    font-size: 52px;
-  }
-
-  .meta.left {
-    left: 24px;
-  }
-
-  .meta.right {
-    right: 24px;
-  }
-
-  .meta.bottom {
-    right: 24px;
-  }
-
   .featured {
     padding: 80px 20px 50px;
   }
