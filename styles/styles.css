@@ -246,3 +246,93 @@ button {
   right: 60px;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    height: 108px;
+    padding: 12px 16px 10px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .brand-text .title {
+    display: none;
+  }
+
+  .links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .links a {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .hero {
+    margin-top: 108px;
+    height: auto;
+    min-height: calc(100svh - 108px);
+  }
+
+  .content {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: 2;
+    width: 100%;
+    max-width: none;
+    padding: 90px 22px 70px;
+  }
+
+  .content h1 {
+    max-width: 100%;
+    font-size: clamp(38px, 12vw, 52px);
+    line-height: 1;
+    overflow-wrap: anywhere;
+  }
+
+  .content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+  }
+
+  .buttons a,
+  .buttons button {
+    width: 100%;
+  }
+
+  .meta.left {
+    top: 28px;
+    left: 22px;
+  }
+
+  .meta.right,
+  .meta.bottom {
+    display: none;
+  }
+}
