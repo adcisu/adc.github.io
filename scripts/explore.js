@@ -83,18 +83,30 @@ function renderProjects(projects) {
     const card = document.createElement("article");
     card.className = "project-card";
 
-    card.innerHTML = `
-      <div class="project-image-wrap">
-        <img src="${project.image}" alt="${project.title}">
-      </div>
-      <div class="project-info">
-        <div class="project-title">${project.title || "Untitled Project"}</div>
-        <div class="project-meta">
-          <span>${project.author || "Unknown"}</span>
-          <span>${project.year || ""}</span>
-        </div>
-      </div>
-    `;
+card.innerHTML = `
+  <div class="project-image-wrap">
+    <img src="${project.image}" alt="${project.title}">
+  </div>
+
+  <div class="project-info">
+    <div class="project-category">
+      ${project.category || ""}
+    </div>
+
+    <div class="project-title">
+      ${project.title || "Untitled Project"}
+    </div>
+
+    <div class="project-location">
+      ${project.location || ""}
+    </div>
+
+    <div class="project-meta">
+      <span>${project.author || "Unknown"}</span>
+      <span>${project.year || ""}</span>
+    </div>
+  </div>
+`;
 
     card.addEventListener("click", () => {
       window.location.href = `project.html?id=${project.id}`;
