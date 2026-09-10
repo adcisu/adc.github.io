@@ -115,6 +115,26 @@
 }
 
 @media (max-width: 900px) {
+
+  .project-hero {
+  margin-top: 108px;
+  height: 55svh;
+  min-height: 420px;
+}
+
+.hero-text {
+  right: 24px;
+}
+
+.project-hero .hero-text h1 {
+  font-size: clamp(28px, 9vw, 40px);
+  overflow-wrap: anywhere;
+}
+
+.hero-meta {
+  line-height: 1.6;
+}
+  
   .project-content {
     padding: 60px 24px;
   }
