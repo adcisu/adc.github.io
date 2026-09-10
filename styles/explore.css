@@ -186,6 +186,30 @@
 }
 
 @media (max-width: 700px) {
+
+  .explore-hero {
+  margin-top: 108px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+}
+
+.filters button,
+.filters select {
+  width: 100%;
+  min-width: 0;
+  padding: 0 8px;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.filters select {
+  grid-column: 1 / -1;
+}
+  
   .explore-hero,
   .projects-grid-section {
     padding-left: 20px;
