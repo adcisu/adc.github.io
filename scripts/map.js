@@ -5,17 +5,7 @@ const documentedLocations = [
     region: "North America",
     lat: 41.8781,
     lng: -87.6298,
-    count: 1,
-    projects: [
-      {
-        title: "Heartland Urban Edge",
-        author: "Antony Dawson",
-        year: "2026",
-        category: "Building Analysis",
-        image: "assets/logo.jpg",
-        link: "project.html?id=project_2"
-      }
-    ]
+    projectIds: ["project_5"]
   },
   {
     id: "kansas-city",
@@ -23,56 +13,37 @@ const documentedLocations = [
     region: "North America",
     lat: 39.0997,
     lng: -94.5786,
-    count: 2,
-    projects: [
-      {
-        title: "Heartland Urban Edge",
-        author: "Antony Dawson",
-        year: "2026",
-        category: "Building Analysis",
-        image: "assets/logo.jpg",
-        link: "project.html?id=project_2"
-
-      }
-    ]
+    projectIds: ["project_1"]
   },
   {
-    id: "bentonville",
-    title: "Bentonville, Arkansas",
+    id: "fayetteville",
+    title: "Fayetteville, Arkansas",
     region: "North America",
-    lat: 36.0704,
-    lng: -94.1480,
-    count: 3,
-    projects: [
-      {
-        title: "Heartland Urban Edge",
-        author: "Antony Dawson",
-        year: "2026",
-        category: "Building Analysis",
-        image: "assets/logo.jpg",
-        link: "project.html?id=project_2"
-      },
-      {
-        title: "Razorback Stadium",
-        author: "Antony Dawson",
-        year: "2026",
-        category: "Freeform",
-        image: "assets/logo.jpg",
-        link: "project.html?id=project_2"
-      }
-    ]
-  }
+    lat: 36.0562,
+    lng: -94.1680,
+    projectIds: ["project_2","project_3"]
+  },
+    {
+    id: "iowa city",
+    title: "Iowa City, Iowa",
+    region: "North America",
+    lat: 41.6611,
+    lng: -91.5302,
+    projectIds: ["project_4"]
+  },
+
 ];
 
 const map = L.map("map", {
   zoomControl: true,
-  attributionControl: false
+  attributionControl: true
 }).setView([39.5, -98.35], 4);
 
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
-  subdomains: "abcd",
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
-  noWrap: true
+  noWrap: true,
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 const worldBounds = L.latLngBounds(
@@ -144,26 +115,52 @@ function renderPanel(location) {
   });
 }
 
-documentedLocations.forEach((location) => {
-  const marker = L.marker([location.lat, location.lng], {
-    icon: L.divIcon({
-      className: "custom-marker",
-      html: markerHTML(location.count, false),
-      iconSize: [34, 34],
-      iconAnchor: [17, 17]
-    })
-  }).addTo(map);
+fetch("data/projects.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Could not load projects.json");
+    }
 
-  marker.on("click", () => {
-    setActiveMarker(location.id);
-    renderPanel(location);
-    map.flyTo([location.lat, location.lng], 5, {
-      duration: 0.8
+    return response.json();
+  })
+  .then((allProjects) => {
+    documentedLocations.forEach((location) => {
+      location.projects = location.projectIds
+        .map((projectId) =>
+          allProjects.find((project) => project.id === projectId)
+        )
+        .filter(Boolean)
+        .map((project) => ({
+          ...project,
+          link: `project.html?id=${project.id}`
+        }));
+
+      location.count = location.projects.length;
+
+      const marker = L.marker([location.lat, location.lng], {
+        icon: L.divIcon({
+          className: "custom-marker",
+          html: markerHTML(location.count, false),
+          iconSize: [34, 34],
+          iconAnchor: [17, 17]
+        })
+      }).addTo(map);
+
+      marker.on("click", () => {
+        setActiveMarker(location.id);
+        renderPanel(location);
+
+        map.flyTo([location.lat, location.lng], 5, {
+          duration: 0.8
+        });
+      });
+
+      markerRefs.push({ location, marker });
     });
+  })
+  .catch((error) => {
+    console.error("Failed to load map projects:", error);
   });
-
-  markerRefs.push({ location, marker });
-});
 
 panelClose.addEventListener("click", () => {
   panelContent.classList.add("hidden");
