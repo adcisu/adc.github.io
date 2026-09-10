@@ -150,6 +150,20 @@
 }
 
 @media (max-width: 700px) {
+
+  .about-page {
+  margin-top: 108px;
+}
+
+.about-hero {
+  padding-top: 60px;
+}
+
+.about-title {
+  font-size: clamp(38px, 11vw, 52px);
+  overflow-wrap: anywhere;
+}
+  
   .about-hero,
   .mission-section,
   .snapshot-section {
